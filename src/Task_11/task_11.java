@@ -32,7 +32,7 @@ class FloatTextInput extends TextIntegerValidate {
 }
 public class task_11 {
     public static void main(String[] args) {
-        System.out.println(FloatTextInput.Validate("233.7"));
+        System.out.println(FloatTextInput.Validate("2378.7"));
 
     }
 }
