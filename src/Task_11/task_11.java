@@ -6,7 +6,7 @@ abstract class TextInput {
 
 }
 class TextIntegerValidate {
-    public static boolean Validate(String stringBuilder) {
+    public  boolean Validate(String stringBuilder) {
         try {
             double base = Double.parseDouble(stringBuilder);
             return true;
@@ -15,10 +15,12 @@ class TextIntegerValidate {
         }
     }
 }
+
 class FloatTextInput extends TextIntegerValidate {
-    public static boolean Validate(String stringBuilder) {
+
+    public  boolean Validate(String stringBuilder) {
        try {
-            if (TextIntegerValidate.Validate(stringBuilder)==true) {
+            if (super.Validate(stringBuilder)==true) {
                 int valid = Integer.parseInt(stringBuilder);
                 return false;
             } else
@@ -32,7 +34,8 @@ class FloatTextInput extends TextIntegerValidate {
 }
 public class task_11 {
     public static void main(String[] args) {
-        System.out.println(FloatTextInput.Validate("2378.7"));
+        FloatTextInput validationСheck = new FloatTextInput();
+        System.out.println(validationСheck.Validate("2355.7"));
 
     }
 }
